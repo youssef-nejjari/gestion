@@ -44,7 +44,9 @@ class CollaborateurController extends Controller
                 'Email' => $request->Email,
             ]);
     
-            return redirect()->route('collaborateurs.index')->with('success', 'Collaborateur ajouté avec succès');
+            if ($request->ajax()) {
+                return response()->json(['success' => true]);
+            } 
         }
     
         // Afficher les détails d’un collaborateur

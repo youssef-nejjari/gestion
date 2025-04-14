@@ -1,18 +1,11 @@
-<!-- resources/views/collaborateur/create.blade.php -->
-@extends('layouts.app')
-
-@section('content')
-<h1 style="text-align:center;">Ajouter un collaborateur</h1>
-
-<div class="container">
-    <form action="{{ route('collaborateurs.store') }}" method="POST">
+<form action="{{ route('collaborateurs.store') }}" method="POST" id="formAjouterColl">
         @csrf
         <div class="mb-3">
-            <label for="NomFr" class="form-label">Nom (Fr)</label>
+            <label for="NomFr" class="form-label">Nom (Français)</label>
             <input type="text" class="form-control" name="NomFr" required>
         </div>
         <div class="mb-3">
-            <label for="NomAr" class="form-label">Nom (Ar)</label>
+            <label for="NomAr" class="form-label">Nom (Arabe)</label>
             <input type="text" class="form-control" name="NomAr" required>
         </div>
         <div class="mb-3">
@@ -32,10 +25,7 @@
                 Enregistrer
             </button>
         </div>
-        <div class="text-center">
-            <a href="{{ route('collaborateurs.index') }}" class="btn btn-secondary" style="margin-top: 20px; width: 20%; height: 45px; border-radius: 10px;">Annuler</a>
-    </div>
-    </form>
-</div>
-@endsection
+</form>
+
+
 

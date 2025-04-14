@@ -70,12 +70,14 @@
         </div>
         <a href="{{ route('profil') }}" class="profil"><i class="bi bi-person-circle" style="margin-right: 5px;"></i>Profil</a>
         <a href="{{ route('login.logout') }}" class="deconnecter"><i class="fas fa-sign-out-alt" style="margin-right: 5px;"></i>Déconnecter</a>
+        @yield('scripts')
     </div>
     
     {{-- Contenu --}}
     <div class="content">
         @yield('content')
     </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

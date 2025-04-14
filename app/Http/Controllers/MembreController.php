@@ -48,8 +48,9 @@ class MembreController extends Controller
             'Poste' => $request->Poste,
         ]);
 
-        return back()->with('success', 'Membre ajouté avec succès');
-        //return redirect()->route('membres.index')->with('success', 'Membre ajouté avec succès');
+        if ($request->ajax()) {
+            return response()->json(['success' => true]);
+        }        //return redirect()->route('membres.index')->with('success', 'Membre ajouté avec succès');
     }
 
     
